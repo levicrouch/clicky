@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "brian",
+        "path": "../images/brian-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 2,
+        "name": "chris",
+        "path": "../images/chris-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 3,
+        "name": "cleveland",
+        "path": "../images/cleveland-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 4,
+        "name": "joe",
+        "path": "../images/joe-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 5,
+        "name": "lois",
+        "path": "../images/lois-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 6,
+        "name": "meg",
+        "path": "../images/meg-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 7,
+        "name": "peter",
+        "path": "../images/peter-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 8,
+        "name": "quagmire",
+        "path": "../images/quagmire-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    },
+    {
+        "id": 9,
+        "name": "stewie",
+        "path": "../images/stewie-160.png",
+        "image-height": 160,
+        "image-width": 160,
+        "image-size-unit": "px"
+    }
+]
