@@ -5,12 +5,13 @@ import ImageTile from '../src/components/ImageTile/ImageTile.js';
 import Images from "./images.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.Images to the imported Images json array
   state = {
     Images
   };
-  shuffleTiles = () => {
-    console.log("You Clicked an image");
+  shuffleTiles = id => {
+    // log clicks of id
+    console.log("You clicked this image:",id);
   };
   render() {
     return (
@@ -19,6 +20,7 @@ class App extends Component {
         <Wrapper>
           {this.state.Images.map(image => (
             <ImageTile
+              shuffleTiles={this.shuffleTiles}
               id={image.id}
               key={image.id}
               name={image.name}
