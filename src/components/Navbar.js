@@ -1,15 +1,19 @@
 import React from 'react';
 
 const Navbar = () => (
-<nav>
-    <div className="nav-wrapper">
-      <a href="#" className="brand-logo">Clicky Game</a>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li>Score<span className="current-score"></span></li>
-        <li>High Score<span className="high-score"></span></li>
-      </ul>
+    <div className="row">
+        <div className="navbar-fixed col l12">
+            <nav>
+                <div className="nav-wrapper lc-nav">
+                    <a href="#" className="brand-logo">Clicky Game</a>
+                    <ul id="nav-mobile" className="right">
+                        <li>Score<span className="current-score"></span></li>
+                        <li>High Score<span className="high-score"></span></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-  </nav>
 );
 
 export default Navbar;
