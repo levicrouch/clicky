@@ -9,6 +9,7 @@ class App extends Component {
   state = {
     Images,
     score: 0,
+    highScore: 0,
     clickedId: 0
   };
 
@@ -20,35 +21,46 @@ class App extends Component {
       [name]: value
     });
   };
-
+  winGame = () => {
+    alert("You Win!");
+    this.setState({
+      highScore: this.state.score,
+      clickedId: 0,
+      score: 0,
+    });
+  }
+  loseGame = () => {
+    alert("You clicked the same tile twice!");
+    alert("You lose!");
+    this.setState({
+      highScore: this.state.score,
+      clickedId: 0,
+      score: 0,
+    });
+  }
   calculateScore = card => {
-    if(this.state.clickedId === 0) {
+    if (this.state.clickedId === 0) {
       this.setState({
-        clickedId: card.id
+        // set clickedId to the id of the fist card clicked
+        clickedId: card.id,
+        // update the score
+        score: this.state.score + 1
       })
-      console.log("set id", this.state.clickedId);
     } else {
-      console.log("check id",this.state.clickedId, card.id);
-
-      if(this.state.clickedId === card.id) {
-        // reset score and state to 0
-        // set high score
-        alert("LOSER");
-      } else {
-        alert("WINNER");
+      // Enter here when we have already clicked one card and click a new card
+      this.setState({
+        // update the score
+        score: this.state.score + 1
+      })
+      if (this.state.clickedId === card.id) {
+        // LOSE condition (clicked the initial card twice)
+        this.loseGame()
+      } else if (this.state.score === 9) {
+        // Win condition, clicked 9 tiles without hitting the same tile twice
+        this.winGame()
+        };
       }
     }
-   
-    // this.setState({
-    //   score: this.state.score + 1
-    // })
-
-    // count number of clicks on each image
-    // increment clickcounter each time an im age is clicked once but not twice
-    // capture the id of the image clicked
-    // update the score when player loses
-
-  }
   render() {
     return (
       <div className="container">
@@ -56,7 +68,7 @@ class App extends Component {
         <Wrapper>
           {this.state.Images.map(image => (
             <ImageTile
-            calculateScore={this.calculateScore}
+              calculateScore={this.calculateScore}
               id={image.id}
               key={image.id}
               name={image.name}
